@@ -1,0 +1,13 @@
+@use "../scss/index" as *;
+
+body {
+  background-color: $color-white;
+}
+
+* {
+  @extend %font-sans;
+
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
