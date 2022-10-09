@@ -1,0 +1,61 @@
+// Primary
+
+// Neutral
+$color-white: #ffffff;
+$color-gray: #888888;
+$color-black: #000000;
+
+// For lightnen and darken functions;
+$color-adjust-1: 20%;
+$color-adjust-2: 40%;
+$color-adjust-3: 60%;
+$color-adjust-4: 80%;
+
+@function lighten-1($color) {
+  @return scale-color($color, $lightness: $color-adjust-1);
+}
+
+@function lighten-2($color) {
+  @return scale-color($color, $lightness: $color-adjust-2);
+}
+
+@function lighten-3($color) {
+  @return scale-color($color, $lightness: $color-adjust-3);
+}
+
+@function lighten-4($color) {
+  @return scale-color($color, $lightness: $color-adjust-4);
+}
+
+@function darken-1($color) {
+  @return scale-color($color, $lightness: $color-adjust-1 * -1);
+}
+
+@function darken-2($color) {
+  @return scale-color($color, $lightness: $color-adjust-2 * -1);
+}
+
+@function darken-3($color) {
+  @return scale-color($color, $lightness: $color-adjust-3 * -1);
+}
+
+@function darken-4($color) {
+  @return scale-color($color, $lightness: $color-adjust-4 * -1);
+}
+
+@function text-contrast($background-color) {
+  $color-brightness: round(
+    (red($background-color) * 299) + (green($background-color) * 587) +
+      (blue($background-color) * 114) / 1000
+  );
+
+  $light-color: round(
+    (red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000
+  );
+
+  @if abs($color-brightness) < ($light-color/2) {
+    @return $color-white;
+  } @else {
+    @return $color-rta-dark-blue;
+  }
+}

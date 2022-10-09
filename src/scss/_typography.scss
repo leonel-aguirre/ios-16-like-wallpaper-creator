@@ -1,0 +1,68 @@
+@use "./fonts/comfortaa.scss";
+
+$font-weight-thin: 100;
+$font-weight-extralight: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400; // Default value for font-weight;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+$font-weight-black: 900;
+
+$font-size-h1: 68px;
+$font-size-h2: 42px;
+$font-size-h3: 32px;
+$font-size-h4: 24px;
+$font-size-body28: 28px;
+$font-size-body18: 18px;
+$font-size-body16: 16px;
+$font-size-body14: 14px;
+$font-size-body10: 10px;
+$font-size-body12: 12px;
+
+%font-sans {
+  font-family: "Comfortaa";
+}
+
+%h1-sans {
+  @extend %font-sans;
+
+  font-size: $font-size-h1;
+}
+
+%h2-sans {
+  @extend %font-sans;
+
+  font-size: $font-size-h2;
+}
+
+%h3-sans {
+  @extend %font-sans;
+
+  font-size: $font-size-h3;
+}
+
+%h4-sans {
+  @extend %font-sans;
+
+  font-size: $font-size-h4;
+}
+
+%body18-sans {
+  @extend %font-sans;
+
+  font-size: $font-size-body18;
+}
+
+%body16-sans {
+  @extend %font-sans;
+
+  font-size: $font-size-body16;
+}
+
+%body14-sans {
+  @extend %font-sans;
+
+  font-size: $font-size-body14;
+}
